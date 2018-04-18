@@ -30,7 +30,6 @@ class FiguresController < ApplicationController
   end
 
   post '/figures/:id' do
-<<<<<<< HEAD
     @figure = Figure.find_by_id(params[:id])
     @figure.update(params["figure"])
     if !params["title"]["name"].empty?
@@ -40,8 +39,6 @@ class FiguresController < ApplicationController
     @landmark = Landmark.find_or_create_by(:name => params["landmark"]["name"])
     @figure.landmarks << @landmark
     redirect to "/figures/#{@figure.id}"
-=======
 
->>>>>>> 8a350c4f407b83309693f3bd02a4f87f3050ab89
   end
 end
